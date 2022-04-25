@@ -2,13 +2,14 @@
   "name": "sovtech_api",
   "version": "1.0.0",
   "description": "graphql api for take home assesment",
-  "main": "app.js",
+  "main": "src/app.ts",
   "scripts": {
     "test": "yarn jest -i --verbose",
     "start:dev": "nodemon ./src/init.ts ts-node",
     "coverage": "yarn jest --collect-coverage",
     "client-install": "npm install --prefix client",
-    "server": "node ./src/init.ts ts-node",
+    "postinstall": "tsc",
+    "server": "node ./src/init.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\"\"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build ---prefix client"
