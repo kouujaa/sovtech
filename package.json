@@ -2,16 +2,13 @@
   "name": "sovtech_api",
   "version": "1.0.0",
   "description": "graphql api for take home assesment",
-  "main": "src/app.ts",
+  "main": "index.js",
   "scripts": {
     "test": "yarn jest -i --verbose",
     "start:dev": "nodemon ./src/init.ts ts-node",
-    "start": "node ./src/init.js",
     "coverage": "yarn jest --collect-coverage",
     "client-install": "npm install --prefix client",
-    "postinstall": "tsc",
-    "build": "yarn build:client && yarn build:server",
-    "server": "node ./src/init.js",
+    "server": "node index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\"\"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build ---prefix client"
@@ -19,7 +16,6 @@
   "engines": {
     "node": "14.17.0"
   },
-  "type": "module",
   "author": "kelvin jjhok anderson",
   "license": "MIT",
   "dependencies": {
