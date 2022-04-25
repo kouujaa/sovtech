@@ -6,7 +6,7 @@
   "scripts": {
     "test": "yarn jest -i --verbose",
     "start:dev": "nodemon ./src/init.ts ts-node",
-    "start": "node ./src/init.js",
+    "start": "nodemon ./src/init.ts",
     "coverage": "yarn jest --collect-coverage",
     "client-install": "npm install --prefix client",
     "postinstall": "tsc",
