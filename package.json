@@ -10,7 +10,7 @@
     "coverage": "yarn jest --collect-coverage",
     "client-install": "npm install --prefix client",
     "postinstall": "tsc",
-    "build": "tsc",
+    "build": "yarn build:client && yarn build:server",
     "server": "node ./src/init.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\"\"npm run client\"",
@@ -19,6 +19,7 @@
   "engines": {
     "node": "14.17.0"
   },
+  "type": "module",
   "author": "kelvin jjhok anderson",
   "license": "MIT",
   "dependencies": {
