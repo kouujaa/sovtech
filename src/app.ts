@@ -4,6 +4,7 @@ import express from "express";
 import { createServer } from "http";
 import morgan from "morgan";
 import { createApolloServer } from "./graphql";
+import path from "path";
 import restRouter from "./rest";
 dotenv.config();
 
@@ -31,7 +32,12 @@ const httpServer = createServer(app);
       exposedHeaders: ["Authorization"],
     })
   );
-
+  if (process.env.NODE_ENV === "development") {
+    app.use(express.static("client/build"));
+    app.get("*", (req, res) => {
+      res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+  }
   /*********************
    * AUTHENTICATION -- IF YOU WANT TO IMPLEMENT IT
    * *******************/

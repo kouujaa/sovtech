@@ -1,6 +1,6 @@
 import httpServer from "./app";
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 /*********************
  * LET'S GO!
