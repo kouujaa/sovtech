@@ -1,0 +1,7 @@
+.env
+.env.*
+yarn-error.log
+node_modules
+**/.DS_Store
+uploads
+dlpre-277714-56a13730a419.json

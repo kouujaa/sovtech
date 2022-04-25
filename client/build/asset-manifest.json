@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.ed3cadf0.js",
+    "static/media/star-wars-4.svg": "/static/media/star-wars-4.3bf2a05eba37f49b9b0ddfa3920fb34f.svg",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.ed3cadf0.js.map": "/static/js/main.ed3cadf0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.ed3cadf0.js"
+  ]
+}
